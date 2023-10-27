@@ -88,9 +88,25 @@ public class StringsAndThings {
      */
     public Boolean gIsHappy(String input){
 
-
-        return null;
+        boolean isHappy = false;
+        // check g, if there's a g in the next index, i++ to go to the one after
+        for(int i = 0; i < input.length(); i++){
+            if(input.charAt(i) == 'g' && input.charAt(i+1) == 'g'){
+                isHappy = true;
+                i++;
+            }
+            else if(input.charAt(i) == 'g' && input.charAt(i++) != 'g'){
+               isHappy = false;
+               i++;
+            }
+        }
+        return isHappy;
     }
+    /**
+     * git clone as usual
+     * git remove -v to see remote aliases
+     * git remote add (name / upstream) (git url of organization's repo)
+     */
 
 
     /**
