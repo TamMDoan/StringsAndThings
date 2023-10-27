@@ -102,11 +102,6 @@ public class StringsAndThings {
         }
         return isHappy;
     }
-    /**
-     * git clone as usual
-     * git remove -v to see remote aliases
-     * git remote add (name / upstream) (git url of organization's repo)
-     */
 
 
     /**
@@ -117,6 +112,16 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        return null;
+
+        // check if i, i+1, and i+2 are the same.
+        int count = 0;
+
+        // .length() - 2 because it'll get an out of index error
+        for(int i = 0; i < input.length()-2; i++){
+            if(input.charAt(i) == input.charAt(i+1) && input.charAt(i) == input.charAt(i+2)){
+                count++;
+            }
+        }
+        return count;
     }
 }
