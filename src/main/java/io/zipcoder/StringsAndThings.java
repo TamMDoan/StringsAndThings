@@ -15,7 +15,18 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+
+        // split the string using spaces, check the last character of each split string
+        // is there a way to do this for all non-letter characters? -- regex pattern?
+        String[] words = new String[input.split(" ").length];
+        words = input.split(" ");
+        int count = 0;
+        for(int i = 0; i < words.length; i++){
+            if(words[i].charAt(words[i].length()-1) == 'y' || words[i].charAt(words[i].length()-1) == 'z'){
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -28,6 +39,9 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
+
+        // substring -- is there a way to remove a substring from a string?
+        // find the indexes and then remove?
         return null;
     }
 
