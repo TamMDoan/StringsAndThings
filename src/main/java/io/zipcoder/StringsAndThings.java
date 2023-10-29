@@ -59,7 +59,7 @@ public class StringsAndThings {
 
         // is there a way to get a count of substrings?
         // is.count == not.count ? true : false
-        // use .split().length again? -- won't work for notnot
+        // use .split().length again? -- won't work for notnot.
         // .replace? -- works, feels complicated? see if there's another way
 
         input = input.replace("not", "*");
